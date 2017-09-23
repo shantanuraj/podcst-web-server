@@ -5,7 +5,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "prestart": "aws s3 sync s3://static.podcst.io/$PODCST_WEB_ENV $PODCST_WEB_ROOT",
+    "prestart": "rm $PODCST_WEB_ROOT/* -rf && aws s3 sync s3://static.podcst.io/$PODCST_WEB_ENV $PODCST_WEB_ROOT",
     "start": "node ."
   }
 }
