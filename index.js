@@ -13,7 +13,7 @@ const server = new Hapi.Server({
 });
 
 server.connection({
-  port: '9141'
+  port: process.env.PORT || '9141'
 });
 
 server.register(Inert);
